@@ -1,0 +1,101 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #08090b;
+  color: #f4efea;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeSpeed;
+}
+
+/* Hardware GPU layer acceleration */
+.gpu-layer {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+.gpu-flight {
+  will-change: transform, opacity;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+/* High-performance virtualization for 500+ items */
+.catalog-item-virtual {
+  content-visibility: auto;
+  contain-intrinsic-size: 0 74px;
+  contain: layout paint style;
+}
+
+/* Editorial Paper / Canvas Grain overlay */
+.editorial-grain {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+/* 3D Book Container Classes */
+.book-stage-perspective {
+  perspective: 1400px;
+  perspective-origin: 50% 50%;
+}
+
+.book-card-preserve-3d {
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+/* Realistic Book Spine highlight */
+.book-spine-highlight {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0.04) 4%,
+    transparent 12%
+  );
+}
+
+.book-shadow-3d {
+  box-shadow: 
+    -12px 20px 45px -8px rgba(0, 0, 0, 0.85),
+    0 40px 80px -15px rgba(0, 0, 0, 0.65),
+    0 0 1px 1px rgba(255, 255, 255, 0.08) inset;
+}
+
+.book-thumb-shadow {
+  box-shadow: 
+    -4px 8px 20px -4px rgba(0, 0, 0, 0.7),
+    0 8px 20px -6px rgba(0, 0, 0, 0.5);
+}
+
+/* Custom Minimal Fast Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #232730;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3a404e;
+}
+
+::selection {
+  background: rgba(212, 175, 55, 0.35);
+  color: #ffffff;
+}
